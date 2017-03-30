@@ -220,3 +220,15 @@ Type::build('timestamp')
 if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
+
+Plugin::load('Migrations');
+
+define(
+    'BASE', 
+    str_replace(
+        "/webroot", 
+        "", 
+        dirname($_SERVER['PHP_SELF']) == "/" ? "" : dirname($_SERVER['PHP_SELF'])
+    )
+);
+
