@@ -50,6 +50,8 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     $routes->connect('/', ['controller' => 'Default', 'action' => 'index', 'home']);
+
+    $routes->connect('/contacts/create', ['controller' => 'Contacts', 'action' => 'create', 'method' => 'POST']);
     
 
     /**

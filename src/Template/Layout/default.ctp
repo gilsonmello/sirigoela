@@ -56,14 +56,13 @@
                 </header>
 
                 <p>Aqui você pode tirar dúvidas ou solicitar um orçamento. Fique a vontade. A resposta é rápida!  </p>
-
-                <form method="post" action="<?php echo BASE;?>/contacts/default_add" id="frm_contacts">
+                <?php echo $this->Form->create($contact) ?> 
                     <div class="row">
                         <div class="6u 12u(mobilep)">
-                            <input type="text" name="name" placeholder="Nome" />
+                            <input class="" type="text" name="name" placeholder="Nome" />
                         </div>
-                        <div class="6u 12u(mobilep)">
-                            <input type="email" name="email" placeholder="Email" />
+                        <div class="6u 12u(mobilep) input text required">
+                            <input class="" type="email" name="email" placeholder="Email" />
                         </div>
                     </div>
                     <div class="row">
@@ -78,7 +77,7 @@
                             </ul>
                         </div>
                     </div>
-                </form>
+                <?php echo $this->Form->end() ?>
 
                 <ul class="icons">
                     <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>

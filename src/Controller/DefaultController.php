@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Validation\Validator;
+use Cake\ORM\TableRegistry;
 
 /**
  * Default Controller
@@ -20,9 +22,24 @@ class DefaultController extends AppController
     {
         //$default = $this->paginate($this->Default);
         $title = 'SiriGoela :: Agência Digital';
+        $this->loadModel('Contacts');
+        $contact = $this->Contacts->newEntity();
+        if ($this->request->is('post')) {
 
-        $this->set(compact('default', 'title'));
-        $this->set('_serialize', ['default']);
+            $contact = $this->Contacts->patchEntity($contact, $this->request->getData());
+            
+            if ($this->Contacts->save($contact)) {
+                $this->Flash->success(__('The contact has been saved.'));
+                return $this->redirect('/');
+            }
+            
+                
+            $this->Flash->error(__('The contact could not be saved. Please, try again.'));
+            
+        }
+
+        $this->set(compact('default', 'title', 'contact'));
+        $this->set('_serialize', ['default', 'contact']);
     }
 
     /**
@@ -49,10 +66,12 @@ class DefaultController extends AppController
      */
     public function add()
     {
-        $default = $this->Default->newEntity();
+        $this->loadModel('Contacts');
+        $default = $this->Contacts->newEntity();
         if ($this->request->is('post')) {
-            $default = $this->Default->patchEntity($default, $this->request->getData());
-            if ($this->Default->save($default)) {
+            $validator = new Validator();
+            $default = $this->Contacts->patchEntity($default, $this->request->getData());
+            if ($this->Contacts->save($default)) {
                 $this->Flash->success(__('The default has been saved.'));
 
                 return $this->redirect(['action' => 'index']);

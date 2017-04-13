@@ -58,7 +58,11 @@ class ContactsTable extends Table
         $validator
             ->email('email')
             ->requirePresence('email', 'create')
-            ->notEmpty('email');
+            ->notEmpty('email', 'E-mail obrigatório')
+            ->add('email', 'validFormat', [
+                'rule' => 'email',
+                'message' => 'E-mail tem que ser válido'
+            ]);
 
         $validator
             ->requirePresence('description', 'create')
@@ -80,7 +84,7 @@ class ContactsTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['email']));
+        $rules->add($rules->isUnique(['email'], 'E-mail já encontra-se em uso'));
 
         return $rules;
     }

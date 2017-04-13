@@ -56,6 +56,9 @@
 		box-sizing: border-box;
 	}
 
+	.error-message{
+		background: red !important;
+	}
 /* Containers */
 
 	.container {

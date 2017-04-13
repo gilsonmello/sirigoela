@@ -16,8 +16,7 @@ class ContactsController extends AppController
      *
      * @return \Cake\Network\Response|null
      */
-    public function index()
-    {
+    public function index(){
         $contacts = $this->paginate($this->Contacts);
 
         $this->set(compact('contacts'));
@@ -67,20 +66,20 @@ class ContactsController extends AppController
      *
      * @return \Cake\Network\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function defaultAdd()
+    public function create()
     {
         $contact = $this->Contacts->newEntity();
         if ($this->request->is('post')) {
+
             $contact = $this->Contacts->patchEntity($contact, $this->request->getData());
-            
             if ($this->Contacts->save($contact)) {
                 $this->Flash->success(__('The contact has been saved.'));
-
-                return $this->redirect(['controller' => 'Default' ,'action' => 'index']);
-            }else{
-                return $this->redirect(['controller' => 'Default' ,'action' => 'index']);
+                return $this->redirect('/');
             }
+
+                
             $this->Flash->error(__('The contact could not be saved. Please, try again.'));
+            
         }
         $this->set(compact('contact'));
         $this->set('_serialize', ['contact']);
