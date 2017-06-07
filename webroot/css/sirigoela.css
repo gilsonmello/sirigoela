@@ -1,0 +1,52 @@
+/*Logo marca do site */
+.main{
+	width: 100%;
+}
+.projetos{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.img-center{
+	margin: 0 auto;
+}
+
+.logo{
+	padding: 15px;
+}
+.rede-social{
+	padding: 15px;
+}
+.rede-social img{
+	display: inline-block;
+}
+.topo-home{
+	background-image: url('../novo_layout/topo_home.jpg');
+	background-size: cover;
+}
+.topo-fundo{
+	background: rgba(255, 255, 255, 0.53);
+	width: 100%;
+}
+.missao-sirigoela{
+	padding-top: 150px;
+	padding-right: 150px;
+	padding-bottom: 150px;
+}
+.missao-sirigoela h1{
+	color: white;
+	font-weight: bold;
+}
+.missao-sirigoela h2{
+	color: white;
+}
+
+/* 
+ Pra dispositivos que tem uma largura mínima de 768 pixels. Tablets, por exemplo.
+*/
+@media (min-width: 200px) and (max-width: 900px) {
+  	.missao-sirigoela{
+		padding-top: 80px;
+		padding-right: 80px;
+		padding-bottom: 80px;
+	}
+}
