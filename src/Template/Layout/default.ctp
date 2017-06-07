@@ -47,13 +47,19 @@
                         <div class="row">
                             <div class="col-md-3 pull-left">
                                 <div class="logo">
-                                    <img class="img-responsive" src="<?php echo BASE;?>/novo_layout/logo.png">
+                                    <a href="#">
+                                        <img class="img-responsive" src="<?php echo BASE;?>/novo_layout/logo.png">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-2 pull-right">
                                 <div class="rede-social">
-                                    <img class="img-responsive" src="<?php echo BASE;?>/novo_layout/face.png">
-                                    <img class="img-responsive" src="<?php echo BASE;?>/novo_layout/insta.png">
+                                    <a href="#">
+                                        <img class="img-responsive" src="<?php echo BASE;?>/novo_layout/face.png">
+                                    </a>
+                                    <a href="#">
+                                        <img class="img-responsive" src="<?php echo BASE;?>/novo_layout/insta.png">
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -81,52 +87,148 @@
                 <div class="row">
                     <div class="col-md-4">
                         <img class="img-responsive img-center" src="<?php echo BASE;?>/novo_layout/lampada.png">
-                        <h2 class="text-center">MARKETING DIGITAL & SOCIAL MEDIA</h2>
-                        <h5 class="text-center">
+                        <h2 class="text-center gray">MARKETING DIGITAL & SOCIAL MEDIA</h2>
+                        <h5 class="text-center gray-light">
                             Google, Facebook e Instagram. Preparamos tudo para o seu sucesso nas buscas e redes sociais.
                         </h5>
                     </div>
 
                     <div class="col-md-4">
                         <img class="img-responsive img-center" src="<?php echo BASE;?>/novo_layout/pc.png">
-                        <h2 class="text-center">WEB DESIGN & DESENVOLVIMENTO</h2>
-                        <h5 class="text-center">
+                        <h2 class="text-center gray">WEB DESIGN & DESENVOLVIMENTO</h2>
+                        <h5 class="text-center gray-light">
                             Sites e manutenção de sistemas. Desenvolvemos a solução ideal para o seu negócio na web.
                         </h5>
                     </div>
 
                     <div class="col-md-4">
                         <img class="img-responsive img-center" src="<?php echo BASE;?>/novo_layout/folder.png">
-                        <h2 class="text-center">DESIGN GRÁFICO & IMPRESSOS</h2>
-                        <h5 class="text-center">
+                        <h2 class="text-center gray">DESIGN GRÁFICO & IMPRESSOS</h2>
+                        <h5 class="text-center gray-light">
                             Construimos juntos a sua marca e entregamos todo material que necessita.
                         </h5>
                     </div>
                 </div>
             </div>
 
-            <div class="container carrossel">
-                <div class="row">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img class="img-responsive"  src="<?php echo BASE;?>/novo_layout/genno.jpg" alt="Los Angeles">
+            <div id="myCarousel" class="carousel slide container">
+                <div class="carousel-inner">
+                    <div class="carousel-imgs active first">
+                        <div>
+                            <div class="col-md-12">
+                                <a href="#">
+                                    <img src="<?php echo BASE;?>/novo_layout/genno.jpg" class="img-responsive">
+                                </a>
                             </div>
+                        </div>
+                        <div>
+                            <div class="col-md-12">
+                                <a href="#">
+                                    <img src="<?php echo BASE;?>/novo_layout/caio.jpg" class="img-responsive">
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <div class="col-xs-12">
+                                <a href="#">
+                                    <img src="<?php echo BASE;?>/novo_layout/ludmila.jpg" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-xs-12">
+                                <a href="#">
+                                    <img src="<?php echo BASE;?>/novo_layout/jessica.jpg" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-xs-12">
+                                <a href="#">
+                                    <img src="<?php echo BASE;?>/novo_layout/galpon.jpg" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-                            <div class="item active">
-                                <img class="img-responsive" src="<?php echo BASE;?>/novo_layout/caio.jpg" alt="Chicago">
+                    <div class="carousel-imgs last">
+                        <div>
+                            <div class="col-md-12">
+                                <a href="#">
+                                    <img src="<?php echo BASE;?>/novo_layout/genno.jpg" class="img-responsive">
+                                </a>
                             </div>
-                        
-                            <div class="item active">
-                                <img class="img-responsive"  src="<?php echo BASE;?>/novo_layout/ludmila.jpg" alt="New york">
+                        </div>
+                        <div>
+                            <div class="col-md-12">
+                                <a href="#">
+                                    <img src="<?php echo BASE;?>/novo_layout/caio.jpg" class="img-responsive">
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <div class="col-xs-12">
+                                <a href="#">
+                                    <img src="<?php echo BASE;?>/novo_layout/ludmila.jpg" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-xs-12">
+                                <a href="#">
+                                    <img src="<?php echo BASE;?>/novo_layout/jessica.jpg" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-xs-12">
+                                <a href="#">
+                                    <img src="<?php echo BASE;?>/novo_layout/galpon.jpg" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#myCarousel" id="anterior">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" id="proximo">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a> 
+            </div>
+
+            <div class="footer">
+                <div class="background-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#" class="pull-right">
+                                    <img src="<?php echo BASE;?>/novo_layout/logo_rodape.png" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <h3>Sirigoela - Agência Digital</h3>
+                                </div>
+                                <div class="row">
+                                    <img src="<?php echo BASE;?>/novo_layout/email.png">
+                                    <label>&nbsp;atendimento@sirigoela.com.br</label>
+                                </div>
+                                <div class="row">
+                                    <img src="<?php echo BASE;?>/novo_layout/whats.png">
+                                    <label>&nbsp;71 98783-0432</label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
 
 
@@ -138,6 +240,7 @@
         <script src="<?php echo BASE;?>/js/util.js"></script>
         <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
         <script src="<?php echo BASE;?>/js/main.js"></script>
+        <script src="<?php echo BASE;?>/js/sirigoela.js"></script>
         <script src="<?php echo BASE;?>/js/default.js"></script>
         
     </body>

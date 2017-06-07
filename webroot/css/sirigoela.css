@@ -1,4 +1,17 @@
+body{
+	color: white;
+	font-family: Arial;
+}
+
+.gray{
+	color: #7e7d7d;
+}
+.gray-light{
+	color: #939393;
+}
+
 /*Logo marca do site */
+
 .main{
 	width: 100%;
 }
@@ -40,6 +53,59 @@
 	color: white;
 }
 
+.carousel-inner > .carousel-imgs{
+	display: none;
+}
+
+.carousel-inner > .active{
+	display: block !important;
+	overflow: hidden;
+    margin: 0 auto;
+    padding-left: 0;
+    width: 1100px;
+    opacity: 0;
+    animation: fadeIn .6s linear forwards;
+}
+
+#myCarousel .carousel-inner{
+	width: 80%;
+	margin: 0 auto;
+}
+/*#myCarousel ul{
+	overflow: hidden;
+    margin: 0 auto;
+    padding-left: 0;
+    width: 1100px;
+}*/
+.carousel-inner > .carousel-imgs div{
+	display: inline-block;
+	list-style: none;
+}
+#myCarousel ul li{
+	display: inline-block;
+	list-style: none;
+}
+
+/* Footer */
+
+.footer{
+	background-color: orange;
+	padding: 45px;
+}
+.footer .background-footer{
+	margin-top: 20px;
+}
+
+/* Carousel */
+
+.carousel-inner .active.left  { left: -33%;             }
+.carousel-inner .active.right { left: 33%;              }
+.carousel-inner .next         { left: 33%               }
+.carousel-inner .prev         { left: -33%              }
+.carousel-control.left        { background-image: none; }
+.carousel-control.right       { background-image: none; }
+.carousel-inner .item         { background: white;      }
+
 /* 
  Pra dispositivos que tem uma largura mínima de 768 pixels. Tablets, por exemplo.
 */
@@ -49,4 +115,10 @@
 		padding-right: 80px;
 		padding-bottom: 80px;
 	}
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
