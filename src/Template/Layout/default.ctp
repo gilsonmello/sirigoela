@@ -47,17 +47,17 @@
                         <div class="row">
                             <div class="col-md-3 pull-left">
                                 <div class="logo">
-                                    <a href="#">
+                                    <a href="<?php echo BASE;?>">
                                         <img class="img-responsive" src="<?php echo BASE;?>/novo_layout/logo.png">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-md-2 pull-right">
                                 <div class="rede-social">
-                                    <a href="#">
+                                    <a href="<?php echo BASE;?>">
                                         <img class="img-responsive" src="<?php echo BASE;?>/novo_layout/face.png">
                                     </a>
-                                    <a href="#">
+                                    <a href="<?php echo BASE;?>">
                                         <img class="img-responsive" src="<?php echo BASE;?>/novo_layout/insta.png">
                                     </a>
                                 </div>
@@ -151,45 +151,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="carousel-imgs last">
-                        <div>
-                            <div class="col-md-12">
-                                <a href="#">
-                                    <img src="<?php echo BASE;?>/novo_layout/genno.jpg" class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="col-md-12">
-                                <a href="#">
-                                    <img src="<?php echo BASE;?>/novo_layout/caio.jpg" class="img-responsive">
-                                </a>
-                            </div>
-                            
-                        </div>
-                        <div>
-                            <div class="col-xs-12">
-                                <a href="#">
-                                    <img src="<?php echo BASE;?>/novo_layout/ludmila.jpg" class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="col-xs-12">
-                                <a href="#">
-                                    <img src="<?php echo BASE;?>/novo_layout/jessica.jpg" class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="col-xs-12">
-                                <a href="#">
-                                    <img src="<?php echo BASE;?>/novo_layout/galpon.jpg" class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Controls -->
@@ -208,7 +169,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
-                                <a href="#" class="pull-right">
+                                <a href="<?php echo BASE;?>" class="pull-right">
                                     <img src="<?php echo BASE;?>/novo_layout/logo_rodape.png" class="img-responsive">
                                 </a>
                             </div>
