@@ -20,8 +20,8 @@
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?= $title ? $title : "SiriGoela" ?>:
-        <?= $this->fetch('title') ?>
+        <?= $title ? $title : "SiriGoela" ?>
+        <?php //echo $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
 
@@ -31,6 +31,8 @@
     <?php //echo $this->Html->css('font-awesome.min.css') ?>
 
     <?php //echo $this->Html->css('home.css') ?>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet">
 
     <link media="all" rel="stylesheet" href="<?php echo BASE;?>/css/sirigoela.css"/> 
     
@@ -66,7 +68,7 @@
                     </div>
                 </div>
 
-                <div class="container missao-sirigoela">
+                <div class="container mission-sirigoela">
                     <div class="row">
                         <div class="col-md-12">
                             <h1 class="">
@@ -83,68 +85,68 @@
                 </div>
             </div>
 
-            <div class="container projetos">
+            <div class="container projects">
                 <div class="row">
                     <div class="col-md-4">
                         <img class="img-responsive img-center" src="<?php echo BASE;?>/novo_layout/lampada.png">
-                        <h2 class="text-center gray">MARKETING DIGITAL & SOCIAL MEDIA</h2>
-                        <h5 class="text-center gray-light">
+                        <h3 class="text-center gray">MARKETING DIGITAL & SOCIAL MEDIA</h3>
+                        <h4 class="text-center gray-light">
                             Google, Facebook e Instagram. Preparamos tudo para o seu sucesso nas buscas e redes sociais.
-                        </h5>
+                        </h4>
                     </div>
 
                     <div class="col-md-4">
                         <img class="img-responsive img-center" src="<?php echo BASE;?>/novo_layout/pc.png">
-                        <h2 class="text-center gray">WEB DESIGN & DESENVOLVIMENTO</h2>
-                        <h5 class="text-center gray-light">
+                        <h3 class="text-center gray">WEB DESIGN & DESENVOLVIMENTO</h3>
+                        <h4 class="text-center gray-light">
                             Sites e manutenção de sistemas. Desenvolvemos a solução ideal para o seu negócio na web.
-                        </h5>
+                        </h4>
                     </div>
 
                     <div class="col-md-4">
                         <img class="img-responsive img-center" src="<?php echo BASE;?>/novo_layout/folder.png">
-                        <h2 class="text-center gray">DESIGN GRÁFICO & IMPRESSOS</h2>
-                        <h5 class="text-center gray-light">
+                        <h3 class="text-center gray">DESIGN GRÁFICO & IMPRESSOS&nbsp;</h3>
+                        <h4 class="text-center gray-light">
                             Construimos juntos a sua marca e entregamos todo material que necessita.
-                        </h5>
+                        </h4>
                     </div>
                 </div>
             </div>
 
-            <div id="myCarousel" class="carousel slide container">
+            <div id="myCarousel" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="carousel-imgs active first">
-                        <div>
-                            <div class="col-md-12">
+                        <div class="img-block">
+                            <div class="col-xs-12 col-md-12">
                                 <a href="#">
                                     <img src="<?php echo BASE;?>/novo_layout/genno.jpg" class="img-responsive">
                                 </a>
                             </div>
                         </div>
-                        <div>
-                            <div class="col-md-12">
+                        <div class="img-block">
+                            <div class="col-xs-12 col-md-12">
                                 <a href="#">
                                     <img src="<?php echo BASE;?>/novo_layout/caio.jpg" class="img-responsive">
                                 </a>
                             </div>
                             
                         </div>
-                        <div>
-                            <div class="col-xs-12">
+                        <div class="img-block">
+                            <div class="col-xs-12 col-md-12">
                                 <a href="#">
                                     <img src="<?php echo BASE;?>/novo_layout/ludmila.jpg" class="img-responsive">
                                 </a>
                             </div>
                         </div>
-                        <div>
-                            <div class="col-xs-12">
+                        <div class="img-block">
+                            <div class="col-xs-12 col-md-12">
                                 <a href="#">
                                     <img src="<?php echo BASE;?>/novo_layout/jessica.jpg" class="img-responsive">
                                 </a>
                             </div>
                         </div>
-                        <div>
-                            <div class="col-xs-12">
+                        <div class="img-block">
+                            <div class="col-xs-12 col-md-12">
                                 <a href="#">
                                     <img src="<?php echo BASE;?>/novo_layout/galpon.jpg" class="img-responsive">
                                 </a>
@@ -154,11 +156,11 @@
                 </div>
 
                 <!-- Controls -->
-                <a class="left carousel-control" href="#myCarousel" id="anterior">
+                <a class="left carousel-control" href="#" id="anterior">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="right carousel-control" href="#myCarousel" id="proximo">
+                <a class="right carousel-control" href="#" id="proximo">
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a> 
@@ -166,14 +168,26 @@
 
             <div class="footer">
                 <div class="background-footer">
-                    <div class="container">
                         <div class="row">
-                            <div class="col-md-6">
-                                <a href="<?php echo BASE;?>" class="pull-right">
-                                    <img src="<?php echo BASE;?>/novo_layout/logo_rodape.png" class="img-responsive">
-                                </a>
-                            </div>
-                            <div class="col-md-6">
+                                <div class="col-sm-5 col-md-5 col-xs-12">
+                                    <a href="<?php echo BASE;?>" class="logo_footer pull-right">
+                                        <img src="<?php echo BASE;?>/novo_layout/logo_rodape.png" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="col-sm-7 col-md-7 col-xs-12">
+                                    <div class="description-footer">
+                                        <h3>SiriGoela - Agência Digital</h3>
+                                        <h5>
+                                            <img src="<?php echo BASE;?>/novo_layout/email.png">
+                                            &nbsp;atendimento@sirigoela.com.br
+                                        </h5>
+                                        <h5>
+                                            <img src="<?php echo BASE;?>/novo_layout/whats.png">
+                                            &nbsp;71 98783-0432
+                                        </h5>
+                                    </div>
+                                </div>
+                            <!-- <div class="col-md-6">
                                 <div class="row">
                                     <h3>Sirigoela - Agência Digital</h3>
                                 </div>
@@ -185,10 +199,9 @@
                                     <img src="<?php echo BASE;?>/novo_layout/whats.png">
                                     <label>&nbsp;71 98783-0432</label>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
-                </div>
             </div>
         </div>
 

@@ -3,7 +3,7 @@ $(function(){
         interval: 10000
     });
     
-    var qtd_ul = ($('.carousel-inner > .carousel-imgs').length) - 1;
+    var qtd_ul = ($('.carousel-inner > .carousel-imgs').length);
     var carousel_ul = $('.carousel-inner > .carousel-imgs');
     var tamanho_li = $('.carousel-inner > .carousel-imgs').width();
     var proximo = undefined;
@@ -11,12 +11,17 @@ $(function(){
     var atual = undefined;
     var idxAtual = 0;
     var trava_loop = false;
-    var esquerda = 0;
-    var direita = 0;
+    var esquerda = 1;
+    var direita = 1;
     var clicou = 0;
-
-    if(qtd_ul >= 1){
-    
+    if(qtd_ul == 1){
+        $('#anterior').css({
+            'display': 'none'
+        }); 
+        $('#proximo').css({
+            'display': 'none'
+        });
+    }else if(qtd_ul >= 2){
         $('#anterior').on('click', function(e){
             e.preventDefault();
             carousel_ul.each(function(i, val){
@@ -31,7 +36,7 @@ $(function(){
                     }else if(esquerda == qtd_ul){
                         $('.first').addClass('active');
                         $('.last').removeClass('active');
-                        esquerda = 0;
+                        esquerda = 1;
                         clicou = 1;
                     }else if(active >= 0){
                         $(this).removeClass('active');
@@ -44,7 +49,7 @@ $(function(){
                     }
                 }
             });
-            esquerda = 0;
+            esquerda = 1;
             clicou = 0;
             
         });
@@ -62,7 +67,7 @@ $(function(){
                     }else if(direita == qtd_ul){
                         $('.first').addClass('active');
                         $('.last').removeClass('active');
-                        direita = 0;
+                        direita = 1;
                         clicou = 1;
                     }else if(active >= 0){
                         $(this).removeClass('active');
@@ -72,9 +77,8 @@ $(function(){
                     }
                 }
             });
-            direita = 0;
+            direita = 1;
             clicou = 0;
-            
         });
 
     }

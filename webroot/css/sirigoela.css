@@ -1,6 +1,10 @@
 body{
 	color: white;
-	font-family: Arial;
+	font-family: 'Raleway', sans-serif;
+}
+
+.projects h1, .projects h2, .projects h3, .projects h4, .projects h5{
+	line-height: 1.5 !important;
 }
 
 .gray{
@@ -10,46 +14,57 @@ body{
 	color: #939393;
 }
 
-/*Logo marca do site */
-
 .main{
 	width: 100%;
 }
-.projetos{
+.projects{
 	margin-top: 100px;
 	margin-bottom: 100px;
 }
+
+/* Centralizando imagens */
 .img-center{
 	margin: 0 auto;
 }
+/* Centralizando imagens */
 
+/* Logo marca do site */
 .logo{
 	padding: 15px;
 }
+/* Logo marca do site */
+
+/* Redes sociais */
 .rede-social{
 	padding: 15px;
 }
 .rede-social img{
 	display: inline-block;
 }
+/* Redes sociais */
+
+
 .topo-home{
 	background-image: url('../novo_layout/topo_home.jpg');
-	background-size: cover;
+	background-size: 100% 100%;
+	background-position: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 .topo-fundo{
 	background: rgba(255, 255, 255, 0.53);
 	width: 100%;
 }
-.missao-sirigoela{
+.mission-sirigoela{
 	padding-top: 150px;
 	padding-right: 150px;
 	padding-bottom: 150px;
 }
-.missao-sirigoela h1{
+.mission-sirigoela h1{
 	color: white;
 	font-weight: bold;
 }
-.missao-sirigoela h2{
+.mission-sirigoela h2{
 	color: white;
 }
 
@@ -62,28 +77,22 @@ body{
 	overflow: hidden;
     margin: 0 auto;
     padding-left: 0;
-    width: 1100px;
     opacity: 0;
     animation: fadeIn .6s linear forwards;
+    text-align: center;
 }
 
 #myCarousel .carousel-inner{
 	width: 80%;
 	margin: 0 auto;
 }
-/*#myCarousel ul{
-	overflow: hidden;
-    margin: 0 auto;
-    padding-left: 0;
-    width: 1100px;
-}*/
+
 .carousel-inner > .carousel-imgs div{
 	display: inline-block;
 	list-style: none;
 }
-#myCarousel ul li{
-	display: inline-block;
-	list-style: none;
+#myCarousel{
+	margin-bottom: 10px;
 }
 
 /* Footer */
@@ -94,6 +103,9 @@ body{
 }
 .footer .background-footer{
 	margin-top: 20px;
+}
+.content-footer{
+	width: 100%;
 }
 
 /* Carousel */
@@ -110,10 +122,46 @@ body{
  Pra dispositivos que tem uma largura mínima de 768 pixels. Tablets, por exemplo.
 */
 @media (min-width: 200px) and (max-width: 900px) {
-  	.missao-sirigoela{
+  	.mission-sirigoela{
 		padding-top: 80px;
 		padding-right: 80px;
 		padding-bottom: 80px;
+	}
+}
+/* 
+ Pra dispositivos que tem uma largura mínima de 768 pixels. Tablets, por exemplo.
+*/
+@media (min-width: 200px) and (max-width: 991px) {
+	.logo_footer{
+		float: none !important;
+	}
+	.logo_footer img{
+		margin: 0 auto;
+	}
+}
+
+
+/* 
+ Pra dispositivos que tem uma largura mínima de 768 pixels. Tablets, por exemplo.
+*/
+@media (max-width: 468px) {
+  	.img-block{
+		display: block !important;
+	}
+	.img-block img{
+		width: 100% !important;
+	}
+	.description-footer{
+		text-align: center;
+	}
+}
+
+/* 
+ Pra dispositivos que tem uma largura mínima de 768 pixels. Tablets, por exemplo.
+*/
+@media (max-width: 760px) {
+	.description-footer{
+		text-align: center;
 	}
 }
 
@@ -121,4 +169,8 @@ body{
     to {
         opacity: 1;
     }
+}
+
+div[style^="text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;"] {
+    display: none !important;
 }
